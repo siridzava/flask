@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+BSNSK
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Edit article</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" value="{{ article.title }}" placeholder="Title"><br>
+        <textarea name="intro" id="intro" class="form-control" placeholder="Intro">{{ article.intro }}</textarea><br>
+        <textarea name="text" rows="7" id="text" class="form-control" placeholder="Text">{{ article.text }}</textarea><br>
+        <input type="submit" class="btn btn-success" value="Apply edits">
+    </form>
+</div>
+
+{% endblock %}
